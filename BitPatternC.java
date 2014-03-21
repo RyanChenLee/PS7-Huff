@@ -6,25 +6,18 @@
 //
 public class BitPatternC implements BitPattern
 {
-    // private ___ bits;
-<<<<<<< HEAD
+    private int bits;
     private int length;
     
-    public BitPatternC(bits, int length)
-=======
-    private int bits;
-	private int length = 0;
+    public BitPatternC(int bits, int length)
+    {
+    	this.bits = bits;
+    	this.length = length;
+    }
     
     public int getBits() 
     {
     	
-    }
-    
-    public BitPatternC(int bits, int length)
->>>>>>> d96a0c601cbb67906ad89e2540c4f4c3450f06fa
-    {
-        this.bits = bits;
-        this.length = length;
     }
     
     public int getLength() {return this.length; }
