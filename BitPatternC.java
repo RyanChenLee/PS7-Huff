@@ -12,7 +12,8 @@ public class BitPatternC implements BitPattern
     
     public int getBits() 
     {
-    	
+    	this.bits = 0;
+    	this.count = 0; 
     }
     
     public BitPatternC(int bits, int length)
