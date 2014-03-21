@@ -10,18 +10,29 @@ public class BitPatternC implements BitPattern
     private int bits;
 	private int length = 0;
     
-    public int getBits() 
-    {
+    public BitStringC() 
+    { 
     	this.bits = 0;
-    	this.count = 0; 
+    	this.count = 0;
     }
-    
+	
     public BitPatternC(int bits, int length)
     {
         this.bits = bits;
         this.length = length;
     }
     
-    public int getLength() {return this.length; }
-    public String toString();
+    public int getBits() {return this.bits;}
+    public int getLength() {return this.length;}
+    
+    public String toString() 
+    {
+    	StringBuilder sb = new StringBuilder();
+    	int temp = this.bits;
+    	for(int i = 0; i < count; i++) {
+    	    sb.append(temp % 2 == 0 ? "0" : "1");
+    	    temp = temp / 2;
+    	}
+    	return sb.reverse().toString();
+    }
 }
