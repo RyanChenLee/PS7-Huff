@@ -4,9 +4,8 @@
 //
 // ADT for a variable length bit string used in Huffman encoding
 //
-public interface BitPattern
-{
-    
-    public int getLength();
+public interface BitPattern {
+    public int getBits();
+	public int getLength();
     public String toString();
 }

@@ -20,7 +20,6 @@
 // NB: The FileReader and FileWriter classes are from the JRE. The BinaryIn and
 //     BinaryOut classes are from the SW stdlib.jar.
 //
-// hi
 import java.io.*;
 
 public interface FileIO {
