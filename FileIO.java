@@ -1,5 +1,5 @@
 // file: FileIO.java
-// author: Bob Muller haha
+// author: Bob Muller
 // date: March 10, 2012
 //
 // The FileIO interface provides functions that can be used for File I/O in
