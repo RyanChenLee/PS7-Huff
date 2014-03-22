@@ -4,6 +4,8 @@
 //
 // Implementation of an ADT for a weighted binary tree used in Huffman encoding
 //
+import java.util.PriorityQueue;
+
 public class HuffTreeC
 {
     private int size;
