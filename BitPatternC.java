@@ -11,15 +11,12 @@ public class BitPatternC implements BitPattern
     
     public BitPatternC(int bits, int length)
     {
-    	this.bits = bits;
-    	this.length = length;
+     this.bits = bits;
+     this.length = length;
     }
     
-    public int getBits() 
-    {
-    	
-    }
-    
+    public int getBits() { return this.bits; }
     public int getLength() {return this.length; }
-    public String toString();
+    
+    public String toString() { return "Bits: " + this.getBits() + ", # of Bits (from right): " + this.getLength(); }
 }

@@ -22,57 +22,53 @@
 //
 import java.io.*;
 
-public class FileIOC implements FileIO {
-
+public class FileIOC implements FileIO
+{
     private String textInFileName;
-
+    
     private String binaryInFileName;
 
-    public FileReader openInputFile(String fname) {
-
-	FileReader fr = null;
-
-	this.textInFileName = fname;
-
-	try {
-	    fr = new FileReader(fname);
-	}
-	catch (FileNotFoundException e) {
-	
-	    System.out.println("FileNotFoundException " + e);
-	}
-	return fr;
+    public FileReader openInputFile(String fname)
+    {
+        FileReader fr = null;
+        this.textInFileName = fname;
+        try
+        {
+            fr = new FileReader(fname);
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("FileNotFoundException " + e);
+        }
+        return fr;
     }
-
-    public BinaryOut openBinaryOutputFile(){
-
-	String binaryOutFileName = this.textInFileName.replace(".txt", ".zip");
-
-	if(Huff.DEBUG)
-	    System.out.println("In openBinaryOutputFile: new file name is " + binaryOutFileName);
-
-	return new BinaryOut(binaryOutFileName);
+    
+    public BinaryOut openBinaryOutputFile()
+    {
+        String binaryOutFileName = this.textInFileName.replace(".txt", ".zip");
+        if(Huff.DEBUG)
+            System.out.println("In openBinaryOutputFile: new file name is " + binaryOutFileName);
+        return new BinaryOut(binaryOutFileName);
     }
-
-    public BinaryIn openBinaryInputFile(String fname) {
-
-	this.binaryInFileName = fname;
-
-	return new BinaryIn(fname);
+    
+    public BinaryIn openBinaryInputFile(String fname)
+    {
+        this.binaryInFileName = fname;
+        return new BinaryIn(fname);
     }
-
-    public FileWriter openOutputFile() {
-
-	FileWriter fw = null;
-
-	String textOutFileName = this.binaryInFileName.replace(".zip", ".txt");
-
-	try {
-	    fw = new FileWriter(textOutFileName);
-	}
-	catch (IOException e) {
-	    System.out.println("openOutFile: FileNotFoundException: " + e);
-	}
-	return fw;
+    
+    public FileWriter openOutputFile()
+    {
+        FileWriter fw = null;
+        String textOutFileName = this.binaryInFileName.replace(".zip", ".txt");
+        try
+        {
+            fw = new FileWriter(textOutFileName);
+        }
+        catch (IOException e)
+        {
+            System.out.println("openOutFile: FileNotFoundException: " + e);
+        }
+        return fw;
     }
 }

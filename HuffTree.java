@@ -4,8 +4,11 @@
 //
 // ADT for a weighted binary tree used in Huffman encoding
 //
-public interface HuffTree
+public interface HuffTree extends Comparable<HuffTree>
 {
+    public int getTreeWeight();
     public int size();
     public String toString();
+    public int compareTo(HuffTree other);
+
 }
